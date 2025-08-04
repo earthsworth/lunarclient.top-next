@@ -31,6 +31,13 @@ export const metadata: Metadata = {
     "lunar",
     "moonsworth",
     "earthsworth",
+    "lunar cracked",
+    "cracked cosmetics",
+    "lunar youtube",
+    "free cosmetics",
+    "lunar free cosmetics",
+    "lunarcn",
+    "lunarclient.com",
   ],
   openGraph: {
     type: "website",
