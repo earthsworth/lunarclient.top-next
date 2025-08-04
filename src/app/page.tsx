@@ -1,4 +1,5 @@
 import { Hero } from "@/components/Hero";
+import { StatisticsChart } from "@/components/StatisticsChart";
 import { TypographyH2 } from "@/components/typography/TypographyH2";
 import {
   Accordion,
@@ -6,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { fetchStatisticsData } from "@/lib/api";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     "free cosmetics",
     "lunar free cosmetics",
     "lunarcn",
-    "lunarclient.com"
+    "lunarclient.com",
   ],
   openGraph: {
     type: "website",
@@ -41,12 +43,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
-
+export default async function Home() {
+  const statisticsData = await fetchStatisticsData();
 
   return (
     <div className="flex flex-col">
-      <Hero/>
+      <Hero />
 
       {/* <div
         className="flex flex-col items-center text-center justify-center h-[100vh] bg-cover bg-center bg-no-repeat shadow-2 overflow-hidden"
@@ -132,6 +134,11 @@ export default function Home() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+        </section>
+
+        <section className="w-150 mt-5">
+          <TypographyH2>Usage Statistics</TypographyH2>
+          <StatisticsChart dataPoints={statisticsData}/>
         </section>
       </div>
     </div>
