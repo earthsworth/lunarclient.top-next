@@ -1,7 +1,5 @@
+import { Hero } from "@/components/Hero";
 import { TypographyH2 } from "@/components/typography/TypographyH2";
-import { TypographyH1 } from "../components/typography/TypographyH1";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -37,9 +35,13 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+
+
   return (
     <div className="flex flex-col">
-      <div
+      <Hero/>
+
+      {/* <div
         className="flex flex-col items-center text-center justify-center h-[100vh] bg-cover bg-center bg-no-repeat shadow-2 overflow-hidden"
         style={{
           backgroundImage: "url('/galaxy.webp')",
@@ -52,7 +54,7 @@ export default function Home() {
             <Link href="/download">Tweak My Browser Today!</Link>
           </Button>
         </section>
-      </div>
+      </div> */}
 
       <div className="mx-10">
         <section className="flex flex-col gap-2">
