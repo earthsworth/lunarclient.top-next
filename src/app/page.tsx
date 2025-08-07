@@ -33,6 +33,9 @@ export const metadata: Metadata = {
     "lunar free cosmetics",
     "lunarcn",
     "lunarclient.com",
+    "solar tweaks",
+    "download solar tweaks",
+    "solar tweaks 2025"
   ],
   openGraph: {
     type: "website",
